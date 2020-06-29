@@ -46,6 +46,18 @@ $ migctl doctor
 $ migctl source create ce vm-source --project $(gcloud config get-value project) --zone <ZONE>
 ```
 
+Available Commands:
+- aws          
+  - add AWS Source cloud configuration to the processing cluster
+- azure        
+  - add Azure Source cloud configuration to the processing cluster
+- ce          
+  - add Compute Engine Source cloud configuration to the processing cluster
+- vmware       
+  - add VMware Source cloud configuration to the processing cluster
+
+
+
 ## Features
 
 - feature:1
