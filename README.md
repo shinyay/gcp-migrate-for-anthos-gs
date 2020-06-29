@@ -65,11 +65,39 @@ vm-source       Compute Engine  *************************       us-central1-a   
 
 #### 4. Create Migration Plan
 
+- [migctl-migrateion-create.sh](script/migctl-migrateion-create.sh)
+
 ```
 $ migctl migration create <MIGRATION_NAME> \
   --source vm-source \
   --vm-id <TARGET_VM_INSTANCE_NAME> --intent Image
 ```
+
+- Output file:
+  - `<MIGRATION_NAME>`.yaml
+
+#### 5. Migrate VM and Generate artifacts
+
+```
+$ migctl migration generate-artifact <MIGRATION_NAME>
+```
+
+```
+$ migctl migration status tomcat-migration
+NAME               PROCESS              STATE                      STATUS    PROGRESS                  AGE
+tomcat-migration   <MIGRATION_NAME>     waitingForImageExportJob   RUNNING   [9/15] 959.918MB copied   3m32s
+```
+
+```
+$ migctl migration get-artifacts <MIGRATION_NAME>
+```
+
+- Dockerfile
+  - Container Image Definition
+- deployment_spec.yaml
+  - Kubernetes Deployment Definition
+- migration.yaml
+  - Copy of Migration Plan
 
 ## Features
 
