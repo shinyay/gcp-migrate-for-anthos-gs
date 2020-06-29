@@ -6,6 +6,9 @@
 
 ## Demo
 
+### 0. Prepare Sample VM
+![marketplace-tomcat](images/marketplace-tomcat.png)
+
 ## Features
 
 - feature:1
