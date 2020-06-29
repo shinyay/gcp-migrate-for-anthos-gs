@@ -9,6 +9,25 @@
 ### 0. Prepare Sample VM
 ![marketplace-tomcat](images/marketplace-tomcat.png)
 
+### 1. Create a processing cluster
+
+- [gke-cluster-create.fish](script/gke-cluster-create.fish)
+
+```
+$ gcloud container clusters create migration-processing \
+    --num-nodes 1 \
+    --scopes "cloud-platform" \
+    --project (gcloud config get-value project) \
+    --zone us-central1-a \
+    --machine-type n1-standard-4 \
+    --image-type ubuntu \
+    --enable-stackdriver-kubernetes
+
+$ gcloud container clusters get-credentials migration-processing \
+    --zone us-central1-a \
+    --project (gcloud config get-value project)
+```
+
 ## Features
 
 - feature:1
