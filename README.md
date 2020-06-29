@@ -30,7 +30,12 @@ $ gcloud container clusters get-credentials migration-processing \
 
 ### 2. Install Migrate for Anthos on Processing Cluster
 ```
-$ migctl setup instal
+$ migctl setup install
+```
+
+```
+$ migctl doctor
+[✓] Deployment
 ```
 
 ## Features
