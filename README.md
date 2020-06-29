@@ -38,6 +38,14 @@ $ migctl doctor
 [✓] Deployment
 ```
 
+### 3. Specify the migration source
+
+- [migctl-source-create.sh](script/migctl-source-create.sh)
+
+```
+$ migctl source create ce vm-source --project $(gcloud config get-value project) --zone <ZONE>
+```
+
 ## Features
 
 - feature:1
