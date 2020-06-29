@@ -63,6 +63,14 @@ NAME            TYPE            DEFAULT-PROJECT                 DEFAULT-ZONE    
 vm-source       Compute Engine  *************************       us-central1-a   N/A             N/A             N/A
 ```
 
+#### 4. Create Migration Plan
+
+```
+$ migctl migration create <MIGRATION_NAME> \
+  --source vm-source \
+  --vm-id <TARGET_VM_INSTANCE_NAME> --intent Image
+```
+
 ## Features
 
 - feature:1
