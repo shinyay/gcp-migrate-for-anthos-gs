@@ -78,6 +78,8 @@ $ migctl migration create <MIGRATION_NAME> \
 
 ### 5. Migrate VM and Generate artifacts
 
+- [migctl-artifact-generate.sh](script/migctl-artifact-generate.sh)
+
 ```
 $ migctl migration generate-artifact <MIGRATION_NAME>
 ```
