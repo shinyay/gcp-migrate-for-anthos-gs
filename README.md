@@ -56,7 +56,12 @@ Available Commands:
 - vmware       
   - add VMware Source cloud configuration to the processing cluster
 
+```
+$ migctl source list
 
+NAME            TYPE            DEFAULT-PROJECT                 DEFAULT-ZONE    CLOUD-DETAILS   CLOUD-EXTENSION MANAGER-ADDRESS
+vm-source       Compute Engine  *************************       us-central1-a   N/A             N/A             N/A
+```
 
 ## Features
 
